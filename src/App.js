@@ -1,6 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import styled, { css } from 'styled-components';
+
+const Button = styled.button`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+
+  ${props =>
+    props.primary &&
+    css`
+      background: palevioletred;
+      color: white;
+    `};
+`
 
 function App() {
   return (
@@ -18,6 +35,7 @@ function App() {
         >
           Dear God I Hope This Works
         </a>
+        <Button>Normal Button</Button>
       </header>
     </div>
   );
