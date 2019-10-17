@@ -1,33 +1,156 @@
-.App {
-  text-align: center;
-}
+/* Main grid container */
+.grid { 
+  display: grid;
+  grid-gap: 0px;
+  align-items: start;
+  grid-template-areas: 
+  "hd"
+  "a1"
+  "a2"
+  "a3"
+  "ft";
+  }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* This is my grid areas */
+header { 
+  grid-area: hd;
+  background-color:rgb(49, 3, 49);
   color: white;
+  height: 80px;
+ }
+
+/*project thumbnail gallery content area*/
+.area_1 { 
+  grid-area: a1;
 }
 
-.App-link {
-  color: #000;
+/*more gallery content area*/
+.area_2 { 
+  grid-area: a2;
+  background-color:rgb(247, 247, 247);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*more gallery content area*/
+.area_3 { 
+  grid-area: a3;
+  background-color:rgb(247, 247, 247);
+}
+
+footer { 
+  grid-area: ft;
+  background-color:rgb(49, 3, 49);
+  color: white;
+  height: 250px;
+ }
+
+
+/*large project gallery*/
+.gallery_large {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  align-items: start;
+  padding: 5% 10%;
+}
+
+.gallery_large > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.gallery_large > article img {
+  width: 100%;
+}
+
+.text {
+  padding: 20px;
+}
+
+.text > button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* small circular gallery at footer */
+.gallery_small {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 20px;
+  align-items: start;
+  padding: 10%;
+}
+
+.gallery_small > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.gallery_small> article img {
+  width: 100%;
+}
+
+/* circular images */
+.image-circular {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.image-circular-centered {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+/* home page project thumbnails */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card_container {
+  padding: 2px 16px;
+}
+
+/*about section */
+
+.about {
+  display: grid;
+  grid-template-areas: 
+  "name"
+  "info"
+  "social social social social";
+  grid-gap: 20px;
+  align-items: start;
+  padding: 5% 10%;
+}
+
+.name { 
+  grid-area: name;
+}
+
+.info { 
+  grid-area: info;
+}
+
+.social { 
+  grid-area: social;
+  background-color: black;
+}
+
+.about > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.about > article img {
+  width: 100%;
 }
